@@ -27,11 +27,13 @@ wnba_nba <- full_join(nba_2022_2023, wnba_2022, by = c("Player.Name" = "Player",
                                                        "FGA" = "FGA", #field goals attempted
                                                        "Is_NBA"))  
 
-
-average_salary_wnba <- mean(wnba_2022$Salary)
-average_salary_nba <- mean(nba_2022_2023$Salary)
+average_salary_wnba <- mean(wnba_2022$X2022.Salary, na.rm = TRUE)
+average_salary_nba <- mean(nba_2022_2023$Salary, na.rm = TRUE)
 
 average_salary_overall <- average_salary_wnba + average_salary_nba / 2
 
 #summarization df: average salary for nba and wnba or something like that
-
+avg_salary <- tibble(
+  Organization = c("NBA", "WNBA"),
+  average_salary = c(average_salary_nba, average_salary_wnba)
+)
