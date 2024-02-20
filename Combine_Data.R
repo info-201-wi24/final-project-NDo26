@@ -27,6 +27,9 @@ wnba_nba <- full_join(nba_2022_2023, wnba_2022, by = c("Player.Name" = "Player",
                                                        "Is_NBA"))  
 
 #continuous/numerical var: maybe like average salary overall?
+average_salary_wnba <- mean(wnba_2022$Salary)
+average_salary_nba <- mean(nba_2022_2023$Salary)
+
 
 
 #summarization df: average salary for nba and wnba or something like that
