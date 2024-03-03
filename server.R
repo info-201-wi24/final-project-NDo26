@@ -29,9 +29,11 @@ server <- function(input, output){
 output$salary_games_played <- renderPlotly({
   plot_code <- ggplot(data = wnba_nba) +
   geom_point(
-    mapping = aes(x = Player.Name,
-                  y = GP))
-  })
+    mapping = aes(x = GP,
+                  y = Salary))
+  }) + xlab("Games Played") + ylab("Salary")
+
+  return(ggplotly(plot_code))
     
   
 }
