@@ -26,4 +26,12 @@ server <- function(input, output){
     return(ggplotly(plot, tooltip = c("text")))
     
   })
+output$salary_games_played <- renderPlotly({
+  plot_code <- ggplot(data = wnba_nba) +
+  geom_point(
+    mapping = aes(x = Player.Name,
+                  y = GP))
+  })
+    
+  
 }
