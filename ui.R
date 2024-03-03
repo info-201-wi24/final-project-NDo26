@@ -33,16 +33,19 @@ overview_tab <- tabPanel("Overview",
 ## VIZ 1 TAB INFO
 
 viz_1_sidebar <- sidebarPanel(
-  h2("Options for graph"),
+  h2("Choose Number of Games Played"),
   #TODO: Put inputs for modifying graph here
-)
+selectInput(inputId = "gp",
+            label = "Select a Number",
+            choices = wnba_nba$GP
+))
 
 viz_1_main_panel <- mainPanel(
-  h2("Vizualization 1 Title"),
-  # plotlyOutput(outputId = "your_viz_1_output_id")
+  h2("Comparing Number of Games Played and Salary"),
+  plotlyOutput(outputId = "salary_games_played")
 )
 
-viz_1_tab <- tabPanel("Viz 1 tab title",
+viz_1_tab <- tabPanel("Salaries by Games Played",
   sidebarLayout(
     viz_1_sidebar,
     viz_1_main_panel
