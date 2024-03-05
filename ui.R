@@ -146,12 +146,14 @@ viz_3_tab <- tabPanel("Comparing Average Stats between NBA and WNBA Players",
 ## CONCLUSIONS TAB INFO
 
 conclusion_tab <- tabPanel("Conclusion",
- h1("Our Conclusions"),
- p("Based on the data that we have found by comparing various WNBA and NBA stats, it is clear that there is blatant discrimination against the WNBA player salaries. When comparing the statisics of each player, it clear that players from both leagues are remarkably talented in their field and deserve to be compensated.
-   Though the data revealed that the players do not all play equally, that does not mean that a NBA player is justified in making thousands and thousands more than a WNBA player. 
- To go more into depth on each discover that we have found, the first tab in our website showed the relationship between the number of games each player played and their salaries. We decided to compare these two stats in order to demonstrate a nongender based statistic such as games played to see if there is room for the pay gap to be justified between WNBA and NBA players based on real statistics.
-It can be argued that because NBA players play more games that they are justified in being compensated so much more money, but the difference in pay is simply unreasonable. As most NBA players play in double or triple the games as WNBA players, it could be justified that their compensation would be double or triple, but instead we see that NBA players salaries outnumber WNBA salaries by up to one thousand percent. This means the average NBA player makes ten times as much as a WNBA player makes. 
-  ")
+ h1("Conclusions of NBA vs WNBA Salary Differences"),
+ p("Based off of our three tabs with different informations about comparing various aspects of players from both leagues and their salaries, we found that there is in fact a gender based discrimination in the pay gap.
+ The first tab shows us...
+ The second tab shows us...
+ The third tab shows us...
+ 
+   We looked accross the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.
+   It is important to look at various data based on gender discrimination because on platforms as big as the NBA and WNBA, there is still a great deal of bias and inequality.")
 )
 
 
