@@ -8,26 +8,6 @@ data <- read.csv("wnba_nba_data.csv")
 server <- function(input, output){
   
   # TODO Make outputs based on the UI inputs here
-  #Salary/Player
-  output$salary_player_plot <- renderPlotly({
-    
-    selected_df <- 
-      data %>%
-      filter(Player.Name %in% c(input$wnba_player, input$nba_player))
-    
-    plot <- ggplot(data = selected_df) +
-      geom_col(
-        mapping = aes(
-          x = Player.Name,
-          y = Salary,
-          text = paste("Player", Player.Name, "has salary of", Salary),
-          fill = Player.Name
-        ) 
-      ) + xlab("Player Name") + ylab("Salary")
-    
-    return(ggplotly(plot, tooltip = c("text")))
-    
-  })
   # Salary and Games
   output$salary_games_played <- renderPlotly({
    
@@ -49,6 +29,27 @@ server <- function(input, output){
       
   return(ggplotly(plot_code))
 
+  })
+  
+  #Salary/Player
+  output$salary_player_plot <- renderPlotly({
+    
+    selected_df <- 
+      data %>%
+      filter(Player.Name %in% c(input$wnba_player, input$nba_player))
+    
+    plot <- ggplot(data = selected_df) +
+      geom_col(
+        mapping = aes(
+          x = Player.Name,
+          y = Salary,
+          text = paste("Player", Player.Name, "has salary of", Salary),
+          fill = Player.Name
+        ) 
+      ) + xlab("Player Name") + ylab("Salary")
+    
+    return(ggplotly(plot, tooltip = c("text")))
+    
   })
   
   #Player Stats

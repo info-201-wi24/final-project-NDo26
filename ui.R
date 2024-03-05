@@ -132,11 +132,11 @@ viz_3_sidebar <- sidebarPanel(
 )
 
 viz_3_main_panel <- mainPanel(
-  h2("Comparing Stats between a NBA and WNBA player"),
+  h2("NBA and WNBA player average stats from 2022 season"),
   plotlyOutput(outputId = "player_stats_comparison")
 )
 
-viz_3_tab <- tabPanel("Comparing In-Game Stats between NBA and WNBA Players",
+viz_3_tab <- tabPanel("Comparing Average Stats between NBA and WNBA Players",
   sidebarLayout(
     viz_3_sidebar,
     viz_3_main_panel
