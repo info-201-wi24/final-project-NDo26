@@ -10,27 +10,33 @@ server <- function(input, output){
   # TODO Make outputs based on the UI inputs here
   # Salary and Games
   output$salary_games_played <- renderPlotly({
-   
+    
+    nba_data <- nba_2022_2023 %>% 
+      filter(GP <= input$games_played)
+    
+    wnba_data <- wnba_2022 %>% 
+      filter(G <= input$games_played)
+    
     plot_code <- ggplot() +
-      geom_point(data = wnba_2022, aes(
+      geom_point(data = wnba_data, aes(
         x = G,
         y = X2022.Salary,
         color = "WNBA",
-         text = paste("Player is a part of the WNBA and plays in", G, "games with a salary of", X2022.Salary)
+        text = paste("Player is a part of the WNBA and plays in", G, "games with a salary of", X2022.Salary)
       )) +
-      geom_point(data = nba_2022_2023, aes(
+      geom_point(data = nba_data, aes(
         x = GP,
         y = Salary,
         color = "NBA",
         text = paste("Player is a part of the NBA and plays in", GP, "games with a salary of", Salary)
       )) +
       scale_color_manual(values = c("WNBA" = "red", "NBA" = "blue"),
-      labels = c("WNBA", "NBA")) + 
+                         labels = c("WNBA", "NBA")) + 
       labs(x = "Number of Games Played",
            y = "Salary")
-      
-  return(ggplotly(plot_code, tooltip = c("text")))
-
+    
+    return(ggplotly(plot_code, tooltip = c("text")))
+    
   })
   
   #Salary/Player
