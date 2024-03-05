@@ -1,6 +1,9 @@
+install.packages("shinythemes")
+library(shinythemes)
 library(plotly)
 library(dplyr)
 library(ggplot2)
+
 
 data <- read.csv("wnba_nba_data.csv", na.strings = "--")
 nba <-
