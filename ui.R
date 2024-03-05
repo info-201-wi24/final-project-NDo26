@@ -72,7 +72,7 @@ viz_2_sidebar <- sidebarPanel(
   selectInput(inputId = "wnba_player", 
               label = "Select a WNBA player",
               choices = sort(wnba$Player.Name),
-              selected =  "A'ja Wilson A Wilson",
+              selected =  "A'ja Wilson",
               multiple = F)
 )
 
@@ -127,7 +127,7 @@ viz_3_sidebar <- sidebarPanel(
   selectInput(inputId = "wnba_player2", 
               label = "Select a WNBA player",
               choices = sort(wnba$Player.Name),
-              selected =  "A'ja Wilson A Wilson",
+              selected =  "A'ja Wilson",
               multiple = F)
 )
 
