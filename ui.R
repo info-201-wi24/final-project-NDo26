@@ -35,10 +35,13 @@ overview_tab <- tabPanel("Overview",
 viz_1_sidebar <- sidebarPanel(
   h2("Choose Number of Games Played"),
   #TODO: Put inputs for modifying graph here
-selectInput(inputId = "gp",
-            label = "Select a Number",
-            choices = wnba_nba$GP
-)
+fluidRow(
+  column(10, 
+         wellPanel(
+           h3("Select Number"),
+           sliderInput("GP", "Number of Games Played",
+                      min = 0, max = 100, value = 50, step = 1)))
+  ),
 h1("Explanation for Graph"),
 p("By looking at the number of games that players from both the NBA and WNBA play, this will give us some idea of whether or not meaninful playing statistics are a factor in determining the wage for players. In theory, the more games a player has played, the higher their salary as they are performing well for their team.
   As we can see from the graph, even though WNBA players play significantly more than NBA players, it is important to recognize the difference in pay when a WNBA and an NBA player play the same amounts of games. There is a significant difference, by thousands and thousands of dollars, by which each player gets paid.
