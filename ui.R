@@ -38,14 +38,16 @@ viz_1_sidebar <- sidebarPanel(
 selectInput(inputId = "gp",
             label = "Select a Number",
             choices = wnba_nba$GP
-))
+)
+h1("Explanation for Graph"),
+p("By looking at the number of games that players from both the NBA and WNBA play, this will give us some idea of whether or not meaninful playing statistics are a factor in determining the wage for players. In theory, the more games a player has played, the higher their salary as they are performing well for their team.")
+)
 
 viz_1_main_panel <- mainPanel(
   h2("Comparing Number of Games Played and Salary"),
-  plotlyOutput(outputId = "salary_games_played")
-)
+  plotlyOutput(outputId = "salary_games_played"))
 
-viz_1_tab <- tabPanel("Salaries by Games Played",
+viz_1_tab <- tabPanel("Comparing Number of Games Played and Salary",
   sidebarLayout(
     viz_1_sidebar,
     viz_1_main_panel
