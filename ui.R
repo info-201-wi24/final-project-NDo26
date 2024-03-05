@@ -1,4 +1,4 @@
-install.packages("shinythemes")
+#install.packages("shinythemes")
 library(shinythemes)
 library(plotly)
 library(dplyr)
@@ -30,7 +30,7 @@ overview_tab <- tabPanel("Overview",
    
    h2("Our Data"),
    HTML("<p>Not wanting to pay $200 to use their API, we decided to scrape data regarding the WNBA from <a href = 'https://herhoopstats.com/'><em>herhoopstats.</em></a>  Although the site does not disclose how they collect their data, herhoopstats is claimed to be the number 1 site for women’s basketball statistics. Usually, sport statistics sites collect their data from official game records, automated web scraping for data, and manual data entries. Our WNBA dataset has 202 rows (including the header row) and 27 columns, containing information  about player salary, their type of contract, and average game statistics for 2022 season.</p>"),
-   HTML("<p>For our data regarding NBA, we found a dataset from <a href = 'https://gigasheet.com/sample-data/nba-player-salaries-2022-23-season'><em>gigasheet</em></a>, a site that allows people to upload and analyze their own and others’ datasets, similar to <em>kaggle. </em>Because of this, we are unsure where the data for the dataset is collected from. The NBA dataset has 467 rows and 52 columns. This file contains data about player salary, their team, position, age, and average game statistics for the 2022-2023 season.</p>")
+   HTML("<p>For our data regarding NBA, we found a dataset from <a href = 'https://gigasheet.com/sample-data/nba-player-salaries-2022-23-season'><em>gigasheet</em></a>, a site that allows people to upload and analyze their own and others’ datasets, similar to <em>kaggle. </em>Because of this, we are unsure where the data for the dataset is collected from. The NBA dataset has 467 rows and 52 columns. This file contains data about player salary, their team, position, age, and average game statistics for the 2022-2023 season.<br><br></p>")
 )
 
 ## VIZ 1 TAB INFO
@@ -66,7 +66,8 @@ viz_1_tab <- tabPanel("Salaries by Games Played",
 ## VIZ 2 TAB INFO-- compare salary between nba and wnba
 
 viz_2_sidebar <- sidebarPanel(
-  h2("Choose your Players"),
+  h3("Have a favorite player in mind from both leagues? 
+     Why not choose them and compare their salaries!"),
   #TODO: Put inputs for modifying graph here
   selectInput(inputId = "nba_player", 
               label = "Select a NBA player",
@@ -77,7 +78,13 @@ viz_2_sidebar <- sidebarPanel(
               label = "Select a WNBA player",
               choices = sort(wnba$Player.Name),
               selected =  "A'ja Wilson",
-              multiple = F)
+              multiple = F),
+  p("While a direct salary comparison may overlook some variables which may 
+    impact potential differences in the salary gap, it gives us an overview of 
+    how the majority of WNBA players are paid significantly less compared to
+    NBA players. A better analysis may be made when combining the information
+    from each of our other graphs, granting a fuller picture of objective
+    player statistics.")
 )
 
 viz_2_main_panel <- mainPanel(
@@ -152,12 +159,12 @@ viz_3_tab <- tabPanel("Comparing Average Stats between NBA and WNBA Players",
 
 conclusion_tab <- tabPanel("Conclusion",
  h1("Conclusions of NBA vs WNBA Salary Differences"),
- p("Based off of our three tabs with different informations about comparing various aspects of players from both leagues and their salaries, we found that there is in fact a gender based discrimination in the pay gap.
- The first tab shows us...
- The second tab shows us...
- The third tab shows us a bar graph that compares in-game averages from a NBA player and a WNBA player. This tab, in addition to the second tab, allows us to visualise how player stats may compare to their salary.
+ p("Based off of our three tabs with different information about comparing various aspects of players from both leagues and their salaries, we found that there is in fact a gender based discrimination in the pay gap.
+ The first tab looks at one factor which may impact the pay difference: games played in a season. Those who argue for differences within the pay gap may break it into two following categories: the frequency which games are played, and the skill level. This visualization addresses the former. 
+ The second tab gives us a large overview and represents a pattern of WNBA players getting paid significantly less than NBA players. This information would be mainly useful for individuals who are already familiar with WNBA and NBA players. 
+ The third tab shows us a bar graph that compares in-game averages from a NBA player and a WNBA player. This tab, in addition to the second tab, allows us to visualize how player stats may compare to their salary, addressing the latter half of the argument for differences within the pay gap, not attributed to plain sexism. 
  
-   We looked accross the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.
+   We looked across the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.
    It is important to look at various data based on gender discrimination because on platforms as big as the NBA and WNBA, there is still a great deal of bias and inequality.")
 )
 

@@ -52,10 +52,9 @@ server <- function(input, output){
           x = Player.Name,
           y = Salary,
           text = paste("Player", Player.Name, "has salary of", Salary),
-          fill = Player.Name
+          fill = Player.Name,
         ) 
-      ) + xlab("Player Name") + ylab("Salary")
-    
+      ) + xlab("Player Name") + ylab("Salary") + scale_fill_manual(values = c("red", "blue"))
     return(ggplotly(plot, tooltip = c("text")))
     
   })
@@ -99,7 +98,7 @@ server <- function(input, output){
           text = paste0(selected_df$Player.Name, " has an average of ", selected_df[[stat_column_name]], " ", tolower(input$stat)),          
           fill = Player.Name
         ) 
-      ) + xlab("Player Name") + ylab(input$stat)
+      ) + xlab("Player Name") + ylab(input$stat) + scale_fill_manual(values = c("red", "blue"))
     
     return(ggplotly(plot, tooltip = c("text")))
   })
