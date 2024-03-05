@@ -43,8 +43,9 @@ fluidRow(
                       min = 0, max = 83, value = 50, step = 1)))
   ),
 h1("Explanation for Graph"),
-p("By looking at the number of games that players from both the NBA and WNBA play, this will give us some idea of whether or not meaninful playing statistics are a factor in determining the wage for players. In theory, the more games a player has played, the higher their salary as they are performing well for their team.
-  As we can see from the graph, even though WNBA players play significantly more than NBA players, it is important to recognize the difference in pay when a WNBA and an NBA player play the same amounts of games. There is a significant difference, by thousands and thousands of dollars, by which each player gets paid.
+p("By looking at the number of games that players from both the NBA and WNBA play, this will give us some idea of whether or not meaningful playing statistics are a factor in determining the wage for players. In theory, the more games a player has played, the higher their salary as they are performing well for their team.
+  As we can see from the graph, even though NBA players play significantly more than WNBA players, it is important to recognize the difference in pay when an NBA and a WNBA player play the same amount of games. There is a significant difference in how much the players in different leagues make even when they play the same amount.
+  The difference is very large, NBA players make thousands and thousands more than WNBA players.
   This adds to our research as it shows the disadvantages professional women basketball players face in their field. They don't get nearly as much playing time as NBA players, and when they do, they are paid significantly less.")
 )
 
