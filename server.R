@@ -15,19 +15,21 @@ server <- function(input, output){
       geom_point(data = wnba_2022, aes(
         x = G,
         y = X2022.Salary,
-        color = "WNBA"
+        color = "WNBA",
+         text = paste("Player is a part of the WNBA and plays in", G, "games with a salary of", X2022.Salary)
       )) +
       geom_point(data = nba_2022_2023, aes(
         x = GP,
         y = Salary,
-        color = "NBA"
+        color = "NBA",
+        text = paste("Player is a part of the NBA and plays in", GP, "games with a salary of", Salary)
       )) +
       scale_color_manual(values = c("WNBA" = "red", "NBA" = "blue"),
       labels = c("WNBA", "NBA")) + 
       labs(x = "Number of Games Played",
            y = "Salary")
       
-  return(ggplotly(plot_code))
+  return(ggplotly(plot_code, tooltip = c("text")))
 
   })
   
