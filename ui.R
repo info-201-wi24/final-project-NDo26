@@ -164,8 +164,7 @@ conclusion_tab <- tabPanel("Conclusion",
  The second tab gives us a large overview and represents a pattern of WNBA players getting paid significantly less than NBA players. This information would be mainly useful for individuals who are already familiar with WNBA and NBA players. 
  The third tab shows us a bar graph that compares in-game averages from a NBA player and a WNBA player. This tab, in addition to the second tab, allows us to visualize how player stats may compare to their salary, addressing the latter half of the argument for differences within the pay gap, not attributed to plain sexism. 
  
-   We looked across the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.
-   It is important to look at various data based on gender discrimination because on platforms as big as the NBA and WNBA, there is still a great deal of bias and inequality.")
+   We looked across the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.")
 )
 
 

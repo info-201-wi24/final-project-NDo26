@@ -1,0 +1,12 @@
+name: WNBA-versus-NBA
+title: WNBA-versus-NBA
+username: aerogelatin
+account: aerogelatin
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11412638
+bundleId: 8336650
+url: https://aerogelatin.shinyapps.io/WNBA-versus-NBA/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
