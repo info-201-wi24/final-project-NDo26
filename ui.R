@@ -65,14 +65,14 @@ viz_2_sidebar <- sidebarPanel(
   h2("Choose your Players"),
   #TODO: Put inputs for modifying graph here
   selectInput(inputId = "nba_player", 
-              label = "Select an NBA player",
-              choices = nba$Player.Name,
-              selected =  "Stephen Curry",
+              label = "Select a NBA player",
+              choices = sort(nba$Player.Name),
+              selected =  "Aaron Gordon",
               multiple = F),
   selectInput(inputId = "wnba_player", 
               label = "Select a WNBA player",
-              choices = wnba$Player.Name,
-              selected =  "Breanna Stewart B Stewart",
+              choices = sort(wnba$Player.Name),
+              selected =  "A'ja Wilson A Wilson",
               multiple = F)
 )
 
@@ -89,18 +89,55 @@ viz_2_tab <- tabPanel("Salary Comparisons by Player",
 )
 
 ## VIZ 3 TAB INFO
-
+stat_choices <- c(
+         "Games Played",
+         "Games Started",
+         "Minutes Played",
+         "Field Goals Made",
+         "Field Goals Attempted",
+         "3-Pointers Made",
+         "3-Pointers Attempted",
+         "2-Pointers Made",
+         "2-Pointers Attempted",
+         "Free-Throws Made",
+         "Free-Throws Attempted",
+         "Offensive Rebounds",
+         "Defensive Rebounds",
+         "Total Rebounds",
+         "Assists",
+         "Steals",
+         "Blocks",
+         "Turnovers",
+         "Personal Fouls"
+)
 viz_3_sidebar <- sidebarPanel(
-  h2("Options for graph"),
+  h2("Select a Stat and Players to compare"),
   #TODO: Put inputs for modifying graph here
+  h3("Choose a Stat"),
+  selectInput(inputId = "stat",
+              label = "Select a Stat",
+              choices = sort(stat_choices)
+              ),
+  h3("Choose your Players"),
+  #TODO: Put inputs for modifying graph here
+  selectInput(inputId = "nba_player", 
+              label = "Select a NBA player",
+              choices = sort(nba$Player.Name),
+              selected =  "Aaron Gordon",
+              multiple = F),
+  selectInput(inputId = "wnba_player", 
+              label = "Select a WNBA player",
+              choices = sort(wnba$Player.Name),
+              selected =  "A'ja Wilson A Wilson",
+              multiple = F)
 )
 
 viz_3_main_panel <- mainPanel(
-  h2("Vizualization 3 Title"),
+  h2("Comparing Stats between a NBA and WNBA player"),
   # plotlyOutput(outputId = "your_viz_1_output_id")
 )
 
-viz_3_tab <- tabPanel("Viz 3 tab title",
+viz_3_tab <- tabPanel("Comparing In-Game Stats between NBA and WNBA Players",
   sidebarLayout(
     viz_3_sidebar,
     viz_3_main_panel

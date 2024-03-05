@@ -50,6 +50,8 @@ wnba_nba <- wnba_nba %>%
          "Field Goals Attempted" = "FGA",
          "3-Pointers Made" = "X3P",
          "3-Pointers Attempted" = "X3PA",
+         "2-Pointers Made" = "X2P",
+         "2-Pointers Attempted" = "X2PA",
          "Free-Throws Made" = "FT",
          "Free-Throws Attempted" = "FTA",
          "Offensive Rebounds" = "ORB",
