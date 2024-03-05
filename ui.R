@@ -38,7 +38,7 @@ viz_1_sidebar <- sidebarPanel(
 fluidRow(
   column(10, 
          wellPanel(
-           h3("Select Number"),
+           h3("Select"),
            sliderInput("games_played", "Number of Games Played",
                       min = 0, max = 100, value = 50, step = 1)))
   ),
@@ -52,7 +52,7 @@ viz_1_main_panel <- mainPanel(
   h2("Comparing Number of Games Played and Salary"),
   plotlyOutput(outputId = "salary_games_played"))
 
-viz_1_tab <- tabPanel("Comparing Number of Games Played and Salary",
+viz_1_tab <- tabPanel("Salaries by Games Played",
   sidebarLayout(
     viz_1_sidebar,
     viz_1_main_panel
