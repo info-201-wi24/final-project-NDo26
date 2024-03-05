@@ -26,14 +26,26 @@ server <- function(input, output){
     return(ggplotly(plot, tooltip = c("text")))
     
   })
-output$salary_games_played <- renderPlotly({
-  plot_code <- ggplot(data = wnba_nba) +
-  geom_point(
-    mapping = aes(x = GP,
-                  y = Salary))
-  }) + xlab("Games Played") + ylab("Salary")
-
+  output$salary_games_played <- renderPlotly({
+   
+    plot_code <- ggplot() +
+      geom_point(data = wnba_2022, aes(
+        x = G,
+        y = X2022.Salary,
+        color = "WNBA"
+      )) +
+      geom_point(data = nba_2022_2023, aes(
+        x = GP,
+        y = Salary,
+        color = "NBA"
+      )) +
+      scale_color_manual(values = c("WNBA" = "red", "NBA" = "blue"),
+      labels = c("WNBA", "NBA")) + 
+      labs(x = "Number of Games Played",
+           y = "Salary")
+      
   return(ggplotly(plot_code))
-    
+
+  })
   
 }
