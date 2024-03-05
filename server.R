@@ -33,7 +33,8 @@ server <- function(input, output){
       scale_color_manual(values = c("WNBA" = "red", "NBA" = "blue"),
                          labels = c("WNBA", "NBA")) + 
       labs(x = "Number of Games Played",
-           y = "Salary")
+           y = "Salary",
+          color = "League")
     
     return(ggplotly(plot_code, tooltip = c("text")))
     
