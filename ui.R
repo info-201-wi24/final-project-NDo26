@@ -159,10 +159,12 @@ conclusion_tab <- tabPanel("Conclusion",
 
 
 
-ui <- navbarPage("WNBA vs NBA",
-  overview_tab,
-  viz_1_tab,
-  viz_2_tab,
-  viz_3_tab,
-  conclusion_tab
+ui <- fluidPage(theme = shinytheme("united"),
+                navbarPage("NBA vs. WNBA",
+                overview_tab,
+                viz_1_tab,
+                viz_2_tab,
+                viz_3_tab,
+                conclusion_tab
+      )
 )
