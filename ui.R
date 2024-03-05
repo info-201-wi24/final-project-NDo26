@@ -39,7 +39,7 @@ fluidRow(
   column(10, 
          wellPanel(
            h3("Select Number"),
-           sliderInput("GP", "Number of Games Played",
+           sliderInput("games_played", "Number of Games Played",
                       min = 0, max = 100, value = 50, step = 1)))
   ),
 h1("Explanation for Graph"),
