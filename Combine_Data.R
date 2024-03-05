@@ -4,6 +4,9 @@
 library(dplyr)
 
 wnba_2022 <- read.csv("2022_WNBA_stats.csv", na.strings = "--")
+wnba_2022 <- wnba_2022 %>%
+  mutate(Player = str_c(word(Player, 1), word(Player, 2), sep = " "))
+
 nba_2022_2023 <- read.csv("NBA_Player_Salaries.csv")
 
 #categorical var
