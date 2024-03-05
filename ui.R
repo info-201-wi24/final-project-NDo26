@@ -132,7 +132,7 @@ viz_3_sidebar <- sidebarPanel(
 )
 
 viz_3_main_panel <- mainPanel(
-  h2("NBA v.s. WNBA Player Stats"),
+  h2("NBA vs WNBA Player Stats"),
   h4("Statistics are per-game averages from the 2022-2023 season"),
   plotlyOutput(outputId = "player_stats_comparison")
 )
@@ -159,7 +159,7 @@ conclusion_tab <- tabPanel("Conclusion",
 
 
 
-ui <- navbarPage("WNBA v.s. NBA",
+ui <- navbarPage("WNBA vs NBA",
   overview_tab,
   viz_1_tab,
   viz_2_tab,
