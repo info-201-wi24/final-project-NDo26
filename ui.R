@@ -40,7 +40,7 @@ fluidRow(
          wellPanel(
            h3("Select"),
            sliderInput("games_played", "Number of Games Played",
-                      min = 0, max = 100, value = 50, step = 1)))
+                      min = 0, max = 83, value = 50, step = 1)))
   ),
 h1("Explanation for Graph"),
 p("By looking at the number of games that players from both the NBA and WNBA play, this will give us some idea of whether or not meaninful playing statistics are a factor in determining the wage for players. In theory, the more games a player has played, the higher their salary as they are performing well for their team.
