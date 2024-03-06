@@ -30,7 +30,7 @@ server <- function(input, output){
         color = "NBA",
         text = paste("Player is a part of the NBA and plays in", GP, "games with a salary of", Salary)
       )) +
-      scale_color_manual(values = c("WNBA" = "red", "NBA" = "blue"),
+      scale_color_manual(values = c("WNBA" = "brown1", "NBA" = "deepskyblue"),
                          labels = c("WNBA", "NBA")) + 
       labs(x = "Number of Games Played",
            y = "Salary",
@@ -55,7 +55,7 @@ server <- function(input, output){
           text = paste("Player", Player.Name, "has salary of", Salary),
           fill = Player.Name,
         ) 
-      ) + xlab("Player Name") + ylab("Salary") + scale_fill_manual(values = c("red", "blue"))
+      ) + xlab("Player Name") + ylab("Salary") + scale_fill_manual(values = c("brown1", "deepskyblue"))
     return(ggplotly(plot, tooltip = c("text")))
     
   })
@@ -99,7 +99,7 @@ server <- function(input, output){
           text = paste0(selected_df$Player.Name, " has an average of ", selected_df[[stat_column_name]], " ", tolower(input$stat)),          
           fill = Player.Name
         ) 
-      ) + xlab("Player Name") + ylab(input$stat) + scale_fill_manual(values = c("red", "blue"))
+      ) + xlab("Player Name") + ylab(input$stat) + scale_fill_manual(values = c("brown1", "deepskyblue"))
     
     return(ggplotly(plot, tooltip = c("text")))
   })
