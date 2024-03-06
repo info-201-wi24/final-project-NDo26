@@ -4,6 +4,8 @@ library(ggplot2)
 library(stringr)
 
 data <- read.csv("wnba_nba_data.csv")
+nba_2022_2023 <- read.csv("nba_2022_2023.csv")
+wnba_2022 <- read.csv("wnba_2022.csv")
 
 server <- function(input, output){
   

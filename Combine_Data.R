@@ -13,12 +13,12 @@ nba_2022_2023 <- read.csv("NBA_Player_Salaries.csv")
 wnba_2022 <- 
   wnba_2022 %>%
   mutate(Is_NBA = 0)
-write.csv(wnba_2022, "wnba_2022.csv")
+#write.csv(wnba_2022, "wnba_2022.csv")
 
 nba_2022_2023 <- 
   nba_2022_2023 %>%
   mutate(Is_NBA = 1)
-write.csv(nba_2022_2023, "nba_2022_2023.csv")
+#write.csv(nba_2022_2023, "nba_2022_2023.csv")
 
 
 wnba_nba <- full_join(nba_2022_2023, wnba_2022, by = c("Player.Name" = "Player", 
