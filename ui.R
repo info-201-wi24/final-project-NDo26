@@ -139,7 +139,9 @@ viz_3_sidebar <- sidebarPanel(
               label = "Select a WNBA player",
               choices = sort(wnba$Player.Name),
               selected =  "A'ja Wilson",
-              multiple = F)
+              multiple = F),
+  p("Visualizing statistics between NBA and WNBA players gives us insight into both the similarities and differences between the players.
+    This tab, in addition to the 'Salary Comparisons By Player' tab, also helps us compare player statistics with their salaries.")
 )
 
 viz_3_main_panel <- mainPanel(
@@ -163,11 +165,8 @@ conclusion_tab <- tabPanel("Conclusion",
  The first tab looks at one factor which may impact the pay difference: games played in a season. Those who argue for differences within the pay gap may break it into two following categories: the frequency which games are played, and the skill level. This visualization addresses the former. 
  The second tab gives us a large overview and represents a pattern of WNBA players getting paid significantly less than NBA players. This information would be mainly useful for individuals who are already familiar with WNBA and NBA players. 
  The third tab shows us a bar graph that compares in-game averages from a NBA player and a WNBA player. This tab, in addition to the second tab, allows us to visualize how player stats may compare to their salary, addressing the latter half of the argument for differences within the pay gap, not attributed to plain sexism. 
- 
-   We looked across the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.")
+ We looked across the players stats and their athletic ability and even though the NBA players beat out the WNBA players in some aspects, like the number of games played, there is still a large pay gap that is not justified by the small difference in stats.")
 )
-
-
 
 ui <- fluidPage(theme = shinytheme("united"),
                 navbarPage("NBA vs. WNBA",
