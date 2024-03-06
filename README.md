@@ -20,7 +20,39 @@ When you are finished, please add the text from your introductory and concluding
 Feel free to delete these instructions for your final README.md file and to make your GitHub repository public if you would like others to be able to see it. 
 
 # Introduction
-
+The gender wage gap is a popularly debated topic within the public sphere; however,
+what happens when we analyze the pay disparity within a traditionally male-dominated space,
+such as basketball? While most gender wage gap statistics present an aggregate of all fields,
+we aim to answer questions regarding the pay gap in the NBA and WNBA. In addition, we also
+aim to explore what these numbers say about the entertainment industry and the audience it
+attracts. Another question we aim to answer is whether the factors that determine salary are
+based on skills and performance or something more immutable, like gender. We also aim to
+inquire whether there is a pay disparity even between certain NBA and WNBA players; would
+this entail the top earners continuing to dominate? Additionally, can we make predictions, taking
+in information about a player, and determine how much a player may make? For future NBA or
+WNBA stars, this analysis may shed light on the reality of the dream. As regular people in
+society, the analysis may reveal certain discriminatory patterns displayed in the entertainment
+industry and may further raise additional questions as to what we, as consumers, can do in
+order to bridge the potential gender wage disparity. Furthermore, how can major corporations do
+better in closing the gender wage gap within the sports industry?
+With the data we have found, we are confident that we will not only be able to deeply
+dive into the pay gap between women and men professional basketball players, but we will also
+be able to answer the questions we presented above. Discovering why there is discrimination
+between gender and wage in the NBA is vital to better understanding overall inequalities in all
+professional sports alike. By focusing solely on the NBA, we aim to seek answers from
+performance, age, and position differences to understand how the large gap came to be. This is
+a relevant and important topic to better understand because as the pay gap continues to grow
+every year, WNBA and women athletes in different fields are left to seek different career paths
+outside of their passion. This is a real-world issue and with the proper information and with
+further insight, we aim to be able to answer many big social problems surrounding gender
+discrimination in the workplace. Gender discrimination happens in so many areas of our lives
+and we hope to achieve some reason as to why this happens on stages as big as professional
+sports. Should a male professional basketball player be making almost 150 times what a female
+professional player makes? In great effort, we attempt to compare male versus female
+professional basketball players’ wages, position, and statistical comparisons to better
+understand what made this giant gap and how it can be lessened in the future. Changing the
+way professional sports players are paid is such an important part of what the future of sports
+holds, but in order to change, we first need to discover why and how it came to be.
 
 
 # Conclusion / Summary Takeaways
