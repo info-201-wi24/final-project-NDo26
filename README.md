@@ -11,7 +11,7 @@ For the Final Project -- Data Wrangling, add the following to this code reposito
 * Data Nutrition Label (pdf) 
 
 
-**Link: [WNBA versus NBA Salary and Statistics](https://6i5l38-nathan-do.shinyapps.io/final-project-BA/)**
+**Link: [WNBA versus NBA Salary and Statistics](https://6i5l38-nathan-do.shinyapps.io/final-project-BA1-WNBA-vs-NBA/)**
 
 Please create the necessary files for your multi-page Shiny app in this GitHub repository. Consult the Canvas assignment for more details. Be sure to publish your app on Shinyapps.io.
 
